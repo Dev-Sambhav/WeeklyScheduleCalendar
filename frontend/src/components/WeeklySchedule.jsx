@@ -122,16 +122,16 @@ const WeeklySchedule = () => {
   return (
     <div className="p-4">
       {/* Header section */}
-      <div className="flex justify-between items-center mb-4">
-        <div className="left_nav | flex space-x-4 items-center justify-center">
+      <div className="flex flex-col md:flex-row space-y-3 justify-between items-center mb-4">
+        <div className="left_nav | flex space-x-4 items-center justify-center w-full md:w-auto">
           {/* Button to navigate to previous week */}
           <button
             onClick={handlePreviousWeek}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg w-full"
           >
             Previous
           </button>
-          <p>{currentDate.format("MMMM DD, YYYY")}</p> {/* Display current date */}
+          <p className="hidden lg:block">{currentDate.format("MMMM DD, YYYY")}</p> {/* Display current date */}
         </div>
         {/* Input to choose date */}
         <div className="flex space-x-2">
@@ -145,7 +145,7 @@ const WeeklySchedule = () => {
         {/* Button to navigate to next week */}
         <button
           onClick={handleNextWeek}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg"
+          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg w-full md:w-auto"
         >
           Next
         </button>
@@ -208,7 +208,7 @@ const WeeklySchedule = () => {
       {/* Button to save events */}
       <button
         onClick={handleSave}
-        className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+        className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg w-full md:w-auto"
       >
         Save
       </button>
